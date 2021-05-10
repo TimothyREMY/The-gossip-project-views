@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>The Gossip Project</title>
+</head>
+<body>
+  <h1>Mon super site de gossip, depuis le dossier views !</h1>
+  <a href="/gossips/new/">Go créer des nouveaux potins !</a>
+  <% @gossips.each do |gossip| %>
+    <p>
+      Le nom de lauteur : <%= gossip.user.first_name %><br/>
+      Le titre du gossip : <%= gossip.title %>
+    </p>
+    
+    <%= link_to "Lire", ("/gossip/#{gossip.id}") %>
+
+  <% end %>
+  
+
+  <a href="/gossips/new/">Go créer des nouveaux potins !</a>
+
+</body>
+</html>
